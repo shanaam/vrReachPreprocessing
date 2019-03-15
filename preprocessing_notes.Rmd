@@ -1,0 +1,11 @@
+---
+title: "VR - Preprocessing"
+output: html_notebook
+---
+
+
+The angles in the by trial csv seems to be flipped around 90
+
+atan2 seems to consider 0 the forward direction???
+
+__Important__: I am using 3cm away from home in the x,y plane -- even for higher targets. It seems a couple of people have curved paths to the higher target -- they go up first, giving really weird angles

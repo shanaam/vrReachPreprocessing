@@ -1,0 +1,40 @@
+---
+title: "Notebook -- Plane Data analaysis"
+output: html_notebook
+---
+
+```{r setup, include=FALSE, warning=FALSE}
+source("planeDataAnalysis_functions.R")
+library(ggplot2)
+```
+
+Read in the No Cursor data file
+```{r}
+# read in the noCursorDF
+rawNoCurDF <- read.csv('data/processed/noCursorsOnly.csv')
+rawNoCurDF$X <- NULL
+```
+
+Get angular deviation means for every target, per participant
+```{r}
+## TESTING
+targetRepsInBlock <- 2
+noCurDF <- MeanDevsPerTarget(rawNoCurDF, targetRepsInBlock = targetRepsInBlock)
+```
+
+Separate the aligned and rotated sessions
+```{r}
+alignedNoCurDF <- noCurDF[noCurDF$rotated_session == FALSE, ]
+rotatedNoCurDF <- noCurDF[noCurDF$rotated_session == TRUE, ]
+```
+
+Subtract baseline
+```{r}
+noCurDF <- SubtractBaseline(rotatedSessionDF = rotatedNoCurDF, alignedSessionDF = alignedNoCurDF)
+```
+
+
+
+
+
+
