@@ -48,7 +48,7 @@ ggplot(noCurDF[noCurDF$plane_visible == FALSE & noCurDF$high_targets == FALSE, ]
        aes(target_angle, angular_dev_h * -1)) +
   geom_boxplot(aes(group = target_angle)) + 
   labs(title = "No plane, low targets") +
-  scale_y_continuous(limits = c(-20, 50))
+  scale_y_continuous(limits = c(-45, 60))
 ```
 
 pH
@@ -57,7 +57,7 @@ ggplot(noCurDF[noCurDF$plane_visible == FALSE & noCurDF$high_targets == TRUE, ],
        aes(target_angle, angular_dev_h * -1)) +
   geom_boxplot(aes(group = target_angle)) +
   labs(title = "No plane, high targets") +
-  scale_y_continuous(limits = c(-20, 50))
+  scale_y_continuous(limits = c(-45, 60))
 ```
 
 Ph
@@ -66,7 +66,7 @@ ggplot(noCurDF[noCurDF$plane_visible == TRUE & noCurDF$high_targets == FALSE, ],
        aes(target_angle, angular_dev_h * -1)) +
   geom_boxplot(aes(group = target_angle)) +
   labs(title = "Visible plane, low targets") +
-  scale_y_continuous(limits = c(-20, 50))
+  scale_y_continuous(limits = c(-45, 60))
 ```
 
 PH
@@ -75,7 +75,7 @@ ggplot(noCurDF[noCurDF$plane_visible == TRUE & noCurDF$high_targets == TRUE, ],
        aes(target_angle, angular_dev_h * -1)) +
   geom_boxplot(aes(group = target_angle)) +
   labs(title = "Visible plane, high targets") +
-  scale_y_continuous(limits = c(-20, 50))
+  scale_y_continuous(limits = c(-45, 60))
 ```
 
 
