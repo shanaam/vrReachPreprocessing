@@ -280,10 +280,9 @@ MakeNocurCSV <- function(perPptPath, numCols, numNoCurTrials){
   
   
   # save the noCursorDF
-  savePath <- 'data/processed/noCursorsOnly.csv'
+  savePath <- 'data/processed/noCursorsOnly_3cm.csv'
   write.csv(noCurDF, savePath)
 }
-
 
 
 # TESTING
