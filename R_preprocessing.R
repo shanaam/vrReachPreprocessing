@@ -291,7 +291,6 @@ MakeNocurCSV <- function(perPptPath, numCols, numNoCurTrials){
 # MakeBetterByTrialCSVs(rawDataPath)
 
 ## MakePerPptCSVs(rawDataPath)
-## perPptPath <- 'data/per_ppt'
 
 perPptPath <- 'data/processed/per_ppt/'
 MakeNocurCSV(perPptPath, numCols = 19, numNoCurTrials = 96)
